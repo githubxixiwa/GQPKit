@@ -23,9 +23,9 @@
 }
 
 #pragma mark - 懒加载
-//SKYLazyView(testView)
+//GQPLazyView(testView)
 
-SKYLazyViewWithOperation(testView, {
+GQPLazyViewWithOperation(testView, {
     _testView.frame = CGRectMake(100, 100, 200, 200);
     _testView.backgroundColor = [UIColor redColor];
 })

@@ -8,12 +8,12 @@
 
 #ifndef SKYKit_h
 #define SKYKit_h
+ 
+#import "GQPMacroDefinition.h"
 
-#import "SKYMacroDefinition.h"
-
-#import "SKYViewMacroDefinition.h"
-#import "SKYLabelMacroDefinition.h"
-#import "SKYImageViewMacroDefinition.h"
-#import "SKYButtonMacroDefinition.h"
+#import "GQPViewMacroDefinition.h"
+#import "GQPLabelMacroDefinition.h"
+#import "GQPImageViewMacroDefinition.h"
+#import "GQPButtonMacroDefinition.h"
 
 #endif /* SKYKit_h */
