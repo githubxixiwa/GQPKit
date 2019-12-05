@@ -1,13 +1,13 @@
 //
-//  SKYMacroDefinition.h
-//  SKYKit
+//  GQPMacroDefinition.h
+//  GQPKit
 //
-//  Created by sky on 2019/10/25.
-//  Copyright © 2019 SKY. All rights reserved.
+//  Created by GQP on 2019/10/25.
+//  Copyright © 2019 GQP. All rights reserved.
 //
 
-#ifndef SKYMacroDefinition_h
-#define SKYMacroDefinition_h
+#ifndef GQPMacroDefinition_h
+#define GQPMacroDefinition_h
 
 #pragma mark - 通知 NSNotification
 #define GQKNotifyCenter \
@@ -28,4 +28,4 @@
 #pragma mark - 偏好设置
 #define GQKUserDefaultsStandard [NSUserDefaults standardUserDefaults]
 
-#endif /* SKYMacroDefinition_h */
+#endif /* GQPMacroDefinition_h */

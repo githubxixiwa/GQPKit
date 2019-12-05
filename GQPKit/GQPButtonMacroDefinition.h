@@ -1,55 +1,55 @@
 //
-//  SKYButtonMacroDefinition.h
-//  SKYKit
+//  GQPButtonMacroDefinition.h
+//  GQPKit
 //
-//  Created by sky on 2019/10/25.
-//  Copyright © 2019 SKY. All rights reserved.
+//  Created by GQP on 2019/10/25.
+//  Copyright © 2019 GQP. All rights reserved.
 //
 
-#ifndef SKYButtonMacroDefinition_h
-#define SKYButtonMacroDefinition_h
+#ifndef GQPButtonMacroDefinition_h
+#define GQPButtonMacroDefinition_h
 
 // button快速设置图片
-#define SKYButtonSetImageWithState(buttonName, imageVar, buttonState) [buttonName setImage:imageVar forState:buttonState];
+#define GQPButtonSetImageWithState(buttonName, imageVar, buttonState) [buttonName setImage:imageVar forState:buttonState];
 
 // button快速设置默认图片
-#define SKYButtonSetImage(buttonName, imageVar) SKYButtonSetImageWithState(buttonName, imageVar, UIControlStateNormal)
+#define GQPButtonSetImage(buttonName, imageVar) GQPButtonSetImageWithState(buttonName, imageVar, UIControlStateNormal)
 
 // button快速设置高亮图片
-#define SKYButtonSetHighlightedImage(buttonName, imageVar) SKYButtonSetImageWithState(buttonName, imageVar, UIControlStateHighlighted)
+#define GQPButtonSetHighlightedImage(buttonName, imageVar) GQPButtonSetImageWithState(buttonName, imageVar, UIControlStateHighlighted)
 
 // button快速设置title,state
-#define SKYButtonSetTitleWithState(buttonName, title, buttonState) [buttonName setTitle:title forState:buttonState];
+#define GQPButtonSetTitleWithState(buttonName, title, buttonState) [buttonName setTitle:title forState:buttonState];
 
 // button快速设置默认title
-#define SKYButtonSetTitle(buttonName, title) [buttonName setTitle:title forState:UIControlStateNormal];
+#define GQPButtonSetTitle(buttonName, title) [buttonName setTitle:title forState:UIControlStateNormal];
 
 // button快速设置高亮title
-#define SKYButtonSetHighlightedTitle(buttonName, title) [buttonName setTitle:title forState:UIControlStateHighlighted];
+#define GQPButtonSetHighlightedTitle(buttonName, title) [buttonName setTitle:title forState:UIControlStateHighlighted];
 
 // button快速设置textColor,state
-#define SKYButtonSetTextColorWithState(buttonName, textColor, buttonState) [buttonName setTitleColor:textColor forState:buttonState];
+#define GQPButtonSetTextColorWithState(buttonName, textColor, buttonState) [buttonName setTitleColor:textColor forState:buttonState];
 
 // button快速设置默认textColor
-#define SKYButtonSetTextColor(buttonName, textColor) [buttonName setTitleColor:textColor forState:UIControlStateNormal];
+#define GQPButtonSetTextColor(buttonName, textColor) [buttonName setTitleColor:textColor forState:UIControlStateNormal];
 
 // button快速设置高亮textColor
-#define SKYButtonSetHighlightedTextColor(buttonName, textColor) [buttonName setTitleColor:textColor forState:UIControlStateHighlighted];
+#define GQPButtonSetHighlightedTextColor(buttonName, textColor) [buttonName setTitleColor:textColor forState:UIControlStateHighlighted];
 
 // button快速设置font
-#define SKYButtonSetTextFont(buttonName, textFont)  buttonName.titleLabel.font = textFont;
+#define GQPButtonSetTextFont(buttonName, textFont)  buttonName.titleLabel.font = textFont;
 
 // button快速设置 sizeToFit
-#define SKYButtonSizeToFit(buttonName) [buttonName sizeToFit];
+#define GQPButtonSizeToFit(buttonName) [buttonName sizeToFit];
 
 // button快速设置点击事件
-#define SKYButtonAddSelectorWithTarget(buttonName, target, sel) [buttonName addTarget:target action:@selector(sel) forControlEvents:UIControlEventTouchUpInside];
+#define GQPButtonAddSelectorWithTarget(buttonName, target, sel) [buttonName addTarget:target action:@selector(sel) forControlEvents:UIControlEventTouchUpInside];
 
 // button快速设置点击事件 target为self
-#define SKYButtonAddTarget(buttonName, sel) SKYButtonAddSelectorWithTarget(buttonName, self, sel)
+#define GQPButtonAddTarget(buttonName, sel) GQPButtonAddSelectorWithTarget(buttonName, self, sel)
 
 // 懒加载button
-#define SKYLazyButton(buttonName)   \
+#define GQPLazyButton(buttonName)   \
 - (UIButton *)buttonName {    \
     if (!_##buttonName) {   \
         _##buttonName = [UIButton buttonWithType:UIButtonTypeCustom];   \
@@ -58,7 +58,7 @@
 }
 
 // 懒加载button,tager方法
-#define SKYLazyButtonWithSelector(buttonName, sel)   \
+#define GQPLazyButtonWithSelector(buttonName, sel)   \
 - (UIButton *)buttonName {    \
     if (!_##buttonName) {   \
         _##buttonName = [UIButton buttonWithType:UIButtonTypeCustom];   \
@@ -68,7 +68,7 @@
 }
 
 // 懒加载button和后续操作
-#define SKYLazyButtonWithOperation(buttonName, operation)   \
+#define GQPLazyButtonWithOperation(buttonName, operation)   \
 - (UIButton *)buttonName {    \
     if (!_##buttonName) {   \
         _##buttonName = [UIButton buttonWithType:UIButtonTypeCustom];   \
@@ -78,7 +78,7 @@
 }
 
 // 懒加载button,tager方法,后续操作
-#define SKYLazyButtonWithSelectorAndOperation(buttonName, sel, operation)   \
+#define GQPLazyButtonWithSelectorAndOperation(buttonName, sel, operation)   \
 - (UIButton *)buttonName {    \
     if (!_##buttonName) {   \
         _##buttonName = [UIButton buttonWithType:UIButtonTypeCustom];   \
@@ -89,7 +89,7 @@
 }
 
 // 懒加载button和设置title,color
-#define SKYLazyButtonWithTitle(buttonName, title, textColor, textFont)   \
+#define GQPLazyButtonWithTitle(buttonName, title, textColor, textFont)   \
 - (UIButton *)buttonName {    \
     if (!_##buttonName) {   \
         _##buttonName = [UIButton buttonWithType:UIButtonTypeCustom];   \
@@ -102,7 +102,7 @@
 }
 
 // 懒加载button,设置title,color,后续操作
-#define SKYLazyButtonWithTitleAndOperation(buttonName, title, textColor, textFont, operation)   \
+#define GQPLazyButtonWithTitleAndOperation(buttonName, title, textColor, textFont, operation)   \
 - (UIButton *)buttonName {    \
     if (!_##buttonName) {   \
         _##buttonName = [UIButton buttonWithType:UIButtonTypeCustom];   \
@@ -116,7 +116,7 @@
 }
 
 // 懒加载button和设置title,color,tager方法
-#define SKYLazyButtonWithTitleAndSelector(buttonName, title, textColor, textFont, sel)   \
+#define GQPLazyButtonWithTitleAndSelector(buttonName, title, textColor, textFont, sel)   \
 - (UIButton *)buttonName {    \
     if (!_##buttonName) {   \
         _##buttonName = [UIButton buttonWithType:UIButtonTypeCustom];   \
@@ -130,7 +130,7 @@
 }
 
 // 懒加载button,设置title,color,tager方法,后续操作
-#define SKYLazyButtonWithTitleAndSelectorAndOperation(buttonName, title, textColor, textFont, sel, operation)   \
+#define GQPLazyButtonWithTitleAndSelectorAndOperation(buttonName, title, textColor, textFont, sel, operation)   \
 - (UIButton *)buttonName {    \
     if (!_##buttonName) {   \
         _##buttonName = [UIButton buttonWithType:UIButtonTypeCustom];   \
@@ -145,7 +145,7 @@
 }
 
 // 懒加载button,设置frame
-#define SKYLazyButtonWithFrame(buttonName, buttonFrame)   \
+#define GQPLazyButtonWithFrame(buttonName, buttonFrame)   \
 - (UIButton *)buttonName {    \
     if (!_##buttonName) {   \
         _##buttonName = [UIButton buttonWithType:UIButtonTypeCustom];   \
@@ -155,7 +155,7 @@
 }
 
 // 懒加载button,设置frame,后续操作
-#define SKYLazyButtonWithFrameAndOperation(buttonName, buttonFrame, operation)   \
+#define GQPLazyButtonWithFrameAndOperation(buttonName, buttonFrame, operation)   \
 - (UIButton *)buttonName {    \
     if (!_##buttonName) {   \
         _##buttonName = [UIButton buttonWithType:UIButtonTypeCustom];   \
@@ -166,7 +166,7 @@
 }
 
 // 懒加载button,设置frame,tager方法
-#define SKYLazyButtonWithFrameAndSelector(buttonName, buttonFrame, sel)   \
+#define GQPLazyButtonWithFrameAndSelector(buttonName, buttonFrame, sel)   \
 - (UIButton *)buttonName {    \
     if (!_##buttonName) {   \
         _##buttonName = [UIButton buttonWithType:UIButtonTypeCustom];   \
@@ -177,7 +177,7 @@
 }
 
 // 懒加载button,设置frame,tager方法,后续操作
-#define SKYLazyButtonWithFrameAndSelectorAndOperation(buttonName, buttonFrame, sel, operation)   \
+#define GQPLazyButtonWithFrameAndSelectorAndOperation(buttonName, buttonFrame, sel, operation)   \
 - (UIButton *)buttonName {    \
     if (!_##buttonName) {   \
         _##buttonName = [UIButton buttonWithType:UIButtonTypeCustom];   \
@@ -189,7 +189,7 @@
 }
 
 // 懒加载button,设置默认图片
-#define SKYLazyButtonWithImage(buttonName, imageVar)   \
+#define GQPLazyButtonWithImage(buttonName, imageVar)   \
 - (UIButton *)buttonName {    \
     if (!_##buttonName) {   \
         _##buttonName = [UIButton buttonWithType:UIButtonTypeCustom];   \
@@ -200,7 +200,7 @@
 }
 
 // 懒加载button,设置默认图片,后续操作
-#define SKYLazyButtonWithImageAndOperation(buttonName, imageVar, operation)   \
+#define GQPLazyButtonWithImageAndOperation(buttonName, imageVar, operation)   \
 - (UIButton *)buttonName {    \
     if (!_##buttonName) {   \
         _##buttonName = [UIButton buttonWithType:UIButtonTypeCustom];   \
@@ -212,7 +212,7 @@
 }
 
 // 懒加载button,设置默认图片,tager方法
-#define SKYLazyButtonWithImageAndSelector(buttonName, imageVar, sel)   \
+#define GQPLazyButtonWithImageAndSelector(buttonName, imageVar, sel)   \
 - (UIButton *)buttonName {    \
     if (!_##buttonName) {   \
         _##buttonName = [UIButton buttonWithType:UIButtonTypeCustom];   \
@@ -224,7 +224,7 @@
 }
 
 // 懒加载button,设置默认图片,tager方法,后续操作
-#define SKYLazyButtonWithImageAndSelectorAndOperation(buttonName, imageVar, sel, operation)   \
+#define GQPLazyButtonWithImageAndSelectorAndOperation(buttonName, imageVar, sel, operation)   \
 - (UIButton *)buttonName {    \
     if (!_##buttonName) {   \
         _##buttonName = [UIButton buttonWithType:UIButtonTypeCustom];   \
@@ -238,7 +238,7 @@
 
 
 // 懒加载button和设置image,title
-#define SKYLazyButtonWithImageAndTitle(buttonName, imageVar, title, textColor, textFont)   \
+#define GQPLazyButtonWithImageAndTitle(buttonName, imageVar, title, textColor, textFont)   \
 - (UIButton *)buttonName {    \
     if (!_##buttonName) {   \
         _##buttonName = [UIButton buttonWithType:UIButtonTypeCustom];   \
@@ -252,7 +252,7 @@
 }
 
 // 懒加载button,设置image,title,后续操作
-#define SKYLazyButtonWithImageAndTitleAndOperation(buttonName, imageVar, title, textColor, textFont, operation)   \
+#define GQPLazyButtonWithImageAndTitleAndOperation(buttonName, imageVar, title, textColor, textFont, operation)   \
 - (UIButton *)buttonName {    \
     if (!_##buttonName) {   \
         _##buttonName = [UIButton buttonWithType:UIButtonTypeCustom];   \
@@ -267,7 +267,7 @@
 }
 
 // 懒加载button和设置image,title,tager方法
-#define SKYLazyButtonWithImageAndTitleAndSelector(buttonName, imageVar, title, textColor, textFont, sel)   \
+#define GQPLazyButtonWithImageAndTitleAndSelector(buttonName, imageVar, title, textColor, textFont, sel)   \
 - (UIButton *)buttonName {    \
     if (!_##buttonName) {   \
         _##buttonName = [UIButton buttonWithType:UIButtonTypeCustom];   \
@@ -282,7 +282,7 @@
 }
 
 // 懒加载button,设置image,title,tager方法,后续操作
-#define SKYLazyButtonWithImageAndTitleAndSelectorAndOperation(buttonName, imageVar, title, textColor, textFont, sel, operation)   \
+#define GQPLazyButtonWithImageAndTitleAndSelectorAndOperation(buttonName, imageVar, title, textColor, textFont, sel, operation)   \
 - (UIButton *)buttonName {    \
     if (!_##buttonName) {   \
         _##buttonName = [UIButton buttonWithType:UIButtonTypeCustom];   \
@@ -299,7 +299,7 @@
 
 
 //// 懒加载button,设置frame,设置默认图片
-//#define SKYLazyButtonWithFrameAndImage(buttonName, buttonFrame, imageVar)   \
+//#define GQPLazyButtonWithFrameAndImage(buttonName, buttonFrame, imageVar)   \
 //- (UIButton *)buttonName {    \
 //    if (!_##buttonName) {   \
 //        _##buttonName = [UIButton buttonWithType:UIButtonTypeCustom];   \
@@ -310,7 +310,7 @@
 //}
 //
 //// 懒加载button,设置frame,设置默认图片,后续操作
-//#define SKYLazyButtonWithFrameAndImageAndOperation(buttonName, buttonFrame, imageVar, operation)   \
+//#define GQPLazyButtonWithFrameAndImageAndOperation(buttonName, buttonFrame, imageVar, operation)   \
 //- (UIButton *)buttonName {    \
 //    if (!_##buttonName) {   \
 //        _##buttonName = [UIButton buttonWithType:UIButtonTypeCustom];   \
@@ -322,7 +322,7 @@
 //}
 
 // 懒加载button,设置frame,设置默认图片,tager方法
-#define SKYLazyButtonWithFrameAndImage(buttonName, buttonFrame, imageVar, sel)   \
+#define GQPLazyButtonWithFrameAndImage(buttonName, buttonFrame, imageVar, sel)   \
 - (UIButton *)buttonName {    \
     if (!_##buttonName) {   \
         _##buttonName = [UIButton buttonWithType:UIButtonTypeCustom];   \
@@ -334,7 +334,7 @@
 }
 
 // 懒加载button,设置frame,设置默认图片,tager方法,后续操作
-#define SKYLazyButtonWithFrameAndImageAndOperation(buttonName, buttonFrame, imageVar, operation, sel)   \
+#define GQPLazyButtonWithFrameAndImageAndOperation(buttonName, buttonFrame, imageVar, operation, sel)   \
 - (UIButton *)buttonName {    \
     if (!_##buttonName) {   \
         _##buttonName = [UIButton buttonWithType:UIButtonTypeCustom];   \
@@ -347,4 +347,4 @@
 }
 
 
-#endif /* SKYButtonMacroDefinition_h */
+#endif /* GQPButtonMacroDefinition_h */
