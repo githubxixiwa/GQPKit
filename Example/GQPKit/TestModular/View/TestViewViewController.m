@@ -7,7 +7,7 @@
 //
 
 #import "TestViewViewController.h"
-#import "SKYKit.h"
+#import <GQPKit.h>
 
 @interface TestViewViewController ()
 /// 测试用的view

@@ -7,6 +7,7 @@
 //
 
 #import "MainTableViewController.h"
+#import <GQPKit.h>
 
 #import "TestViewViewController.h"
 #import "TestLabelViewController.h"
@@ -16,7 +17,7 @@
 @interface MainTableViewController ()
 
 @end
-
+NSString static *notiKey = @"log";
 @implementation MainTableViewController
 
 - (void)viewDidLoad {
@@ -25,6 +26,17 @@
     self.tableView.rowHeight = 30;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellID"];
     self.tableView.tableFooterView = [UIView new];
+    GQKNotifyAdd(notiKey, @selector(log));
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    GQKNotifyPost(notiKey, nil);
+}
+
+#pragma mark - private
+- (void)log {
+    NSLog(@"------- viewWillAppearLog --------");
 }
 
 #pragma mark - Table view data source

@@ -11,4 +11,9 @@
 
 #import "SKYMacroDefinition.h"
 
+#import "SKYViewMacroDefinition.h"
+#import "SKYLabelMacroDefinition.h"
+#import "SKYImageViewMacroDefinition.h"
+#import "SKYButtonMacroDefinition.h"
+
 #endif /* SKYKit_h */
