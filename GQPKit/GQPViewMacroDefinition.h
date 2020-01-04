@@ -1,26 +1,26 @@
 //
-//  SKYViewMacroDefinition.h
-//  SKYKit
+//  GQPViewMacroDefinition.h
+//  GQPKit
 //
-//  Created by sky on 2019/10/25.
-//  Copyright © 2019 SKY. All rights reserved.
+//  Created by GQP on 2019/10/25.
+//  Copyright © 2019 GQP. All rights reserved.
 //
 
-#ifndef SKYViewMacroDefinition_h
-#define SKYViewMacroDefinition_h
+#ifndef GQPViewMacroDefinition_h
+#define GQPViewMacroDefinition_h
 
 // 快速设置frame
-#define SKYViewSetFrame(viewName, viewFrame) viewName.frame = viewFrame;
+#define GQPViewSetFrame(viewName, viewFrame) viewName.frame = viewFrame;
 
 // 快速设置center
-#define SKYViewSetCenter(viewName, centerVar) viewName.center = centerVar;
+#define GQPViewSetCenter(viewName, centerVar) viewName.center = centerVar;
 
 // 快速设置背景色
-#define SKYViewSetBackgroundColor(viewName, viewBackgroundColor) viewName.backgroundColor = viewBackgroundColor;
+#define GQPViewSetBackgroundColor(viewName, viewBackgroundColor) viewName.backgroundColor = viewBackgroundColor;
 
 
 // 懒加载view
-#define SKYLazyView(viewName)   \
+#define GQPLazyView(viewName)   \
 - (UIView *)viewName {    \
     if (!_##viewName) {   \
         _##viewName = [[UIView alloc]init];   \
@@ -29,7 +29,7 @@
 }
 
 // 懒加载view,并后续操作
-#define SKYLazyViewWithOperation(viewName, operation)    \
+#define GQPLazyViewWithOperation(viewName, operation)    \
 - (UIView *)viewName {    \
     if (!_##viewName) {   \
         _##viewName = [[UIView alloc]init];   \
@@ -39,7 +39,7 @@
 }
 
 // 懒加载view,并设置Frame
-#define SKYLazyViewWithFrame(viewName, viewFrame)    \
+#define GQPLazyViewWithFrame(viewName, viewFrame)    \
 - (UIView *)viewName {    \
     if (!_##viewName) {   \
         _##viewName = [[UIView alloc]initWithFrame:viewFrame];   \
@@ -48,7 +48,7 @@
 }
 
 // 懒加载view,并设置Frame和背景颜色
-#define SKYLazyViewWithFrameAndColor(viewName, viewFrame, viewColor)    \
+#define GQPLazyViewWithFrameAndColor(viewName, viewFrame, viewColor)    \
 - (UIView *)viewName {    \
     if (!_##viewName) {   \
         _##viewName = [[UIView alloc]initWithFrame:viewFrame];   \
@@ -58,7 +58,7 @@
 }
 
 // 懒加载view,并设置Frame,背景颜色,后续操作
-#define SKYLazyViewWithFrameAndColorAndOperation(viewName, viewFrame, viewColor, operation)    \
+#define GQPLazyViewWithFrameAndColorAndOperation(viewName, viewFrame, viewColor, operation)    \
 - (UIView *)viewName {    \
     if (!_##viewName) {   \
         _##viewName = [[UIView alloc]initWithFrame:viewFrame];   \
@@ -68,4 +68,4 @@
     return _##viewName;   \
 }
 
-#endif /* SKYViewMacroDefinition_h */
+#endif /* GQPViewMacroDefinition_h */

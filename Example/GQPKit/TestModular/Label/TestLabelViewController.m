@@ -7,7 +7,7 @@
 //
 
 #import "TestLabelViewController.h"
-#import "SKYKit.h"
+#import <GQPKit.h>
 
 @interface TestLabelViewController ()
 /// 测试用的Label

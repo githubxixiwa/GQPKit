@@ -7,7 +7,7 @@
 //
 
 #import "TestImageViewViewController.h"
-#import "SKYKit.h"
+#import <GQPKit.h>
 
 @interface TestImageViewViewController ()
 /// 测试imageView
@@ -39,7 +39,7 @@
 
 //SKYLazyImageViewWithFrameAndImage(imageView, CGRectMake(100, 100, 100, 50), [UIImage imageNamed:@"wxTimeline"])
 
-SKYLazyImageViewWithFrameAndImageAndOperation(imageView, CGRectMake(100, 100, 100, 50), [UIImage imageNamed:@"wxTimeline"],{
+GQPLazyImageViewWithFrameAndImageAndOperation(imageView, CGRectMake(100, 100, 100, 50), [UIImage imageNamed:@"wxTimeline"],{
     _imageView.alpha = 0.3;
 })
 @end

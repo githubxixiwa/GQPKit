@@ -1,16 +1,16 @@
 //
-//  SKYImageViewMacroDefinition.h
-//  SKYKit
+//  GQPImageViewMacroDefinition.h
+//  GQPKit
 //
-//  Created by sky on 2019/10/25.
-//  Copyright © 2019 SKY. All rights reserved.
+//  Created by GQP on 2019/10/25.
+//  Copyright © 2019 GQP. All rights reserved.
 //
 
-#ifndef SKYImageViewMacroDefinition_h
-#define SKYImageViewMacroDefinition_h
+#ifndef GQPImageViewMacroDefinition_h
+#define GQPImageViewMacroDefinition_h
 
 // 懒加载imageView
-#define SKYLazyImageView(imageViewName)   \
+#define GQPLazyImageView(imageViewName)   \
 - (UIImageView *)imageViewName {    \
     if (!_##imageViewName) {   \
         _##imageViewName = [[UIImageView alloc]init];   \
@@ -19,7 +19,7 @@
 }
 
 // 懒加载imageView,和后续操作
-#define SKYLazyImageViewWithOperation(imageViewName, operation)   \
+#define GQPLazyImageViewWithOperation(imageViewName, operation)   \
 - (UIImageView *)imageViewName {    \
     if (!_##imageViewName) {   \
         _##imageViewName = [[UIImageView alloc]init];   \
@@ -29,7 +29,7 @@
 }
 
 // 懒加载imageView和设置image
-#define SKYLazyImageViewWithImage(imageViewName, imageVar)   \
+#define GQPLazyImageViewWithImage(imageViewName, imageVar)   \
 - (UIImageView *)imageViewName {    \
     if (!_##imageViewName) {   \
         _##imageViewName = [[UIImageView alloc]init];   \
@@ -39,7 +39,7 @@
 }
 
 // 懒加载imageView,设置image,后续操作
-#define SKYLazyImageViewWithImageAndOperation(imageViewName, imageVar, operation)   \
+#define GQPLazyImageViewWithImageAndOperation(imageViewName, imageVar, operation)   \
 - (UIImageView *)imageViewName {    \
     if (!_##imageViewName) {   \
         _##imageViewName = [[UIImageView alloc]init];   \
@@ -50,7 +50,7 @@
 }
 
 // 懒加载imageView,设置frame,设置image
-#define SKYLazyImageViewWithFrameAndImage(imageViewName, imageViewFrame, imageVar)   \
+#define GQPLazyImageViewWithFrameAndImage(imageViewName, imageViewFrame, imageVar)   \
 - (UIImageView *)imageViewName {    \
     if (!_##imageViewName) {   \
         _##imageViewName = [[UIImageView alloc]initWithFrame:imageViewFrame];   \
@@ -61,7 +61,7 @@
 }
 
 // 懒加载imageView,设置frame,设置image,后续操作
-#define SKYLazyImageViewWithFrameAndImageAndOperation(imageViewName, imageViewFrame, imageVar, operation)   \
+#define GQPLazyImageViewWithFrameAndImageAndOperation(imageViewName, imageViewFrame, imageVar, operation)   \
 - (UIImageView *)imageViewName {    \
     if (!_##imageViewName) {   \
         _##imageViewName = [[UIImageView alloc]initWithFrame:imageViewFrame];   \
@@ -72,4 +72,4 @@
     return _##imageViewName;   \
 }
 
-#endif /* SKYImageViewMacroDefinition_h */
+#endif /* GQPImageViewMacroDefinition_h */
