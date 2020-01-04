@@ -7,7 +7,7 @@
 //
 
 #import "TestButtonViewController.h"
-#import "SKYKit.h"
+#import <GQPKit.h>
 
 @interface TestButtonViewController ()
 /// 测试的button
